@@ -1,4 +1,4 @@
-package dwsc.proyecto.uncommentmovie.domain;
+package dwsc.proyecto.deletecomment.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

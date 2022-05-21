@@ -1,4 +1,4 @@
-package dwsc.proyecto.uncommentmovie.exceptions;
+package dwsc.proyecto.deletecomment.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;

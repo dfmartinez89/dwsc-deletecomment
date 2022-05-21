@@ -28,6 +28,6 @@ server:
 
 spring:
  application:
-  name: uncomment-movie
+  name: delete-comment
  config:
   import: configserver:http://localhost:8888

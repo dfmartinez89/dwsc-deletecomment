@@ -1,12 +1,12 @@
-package dwsc.proyecto.uncommentmovie.service;
+package dwsc.proyecto.deletecomment.service;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import dwsc.proyecto.uncommentmovie.dao.CommentRepository;
-import dwsc.proyecto.uncommentmovie.domain.Comment;
+import dwsc.proyecto.deletecomment.dao.CommentRepository;
+import dwsc.proyecto.deletecomment.domain.Comment;
 
 @Service
 public class CommentServiceImpl implements CommentService {

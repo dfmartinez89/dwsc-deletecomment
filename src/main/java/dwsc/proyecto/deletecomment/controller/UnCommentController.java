@@ -1,4 +1,4 @@
-package dwsc.proyecto.uncommentmovie.controller;
+package dwsc.proyecto.deletecomment.controller;
 
 import java.util.Optional;
 
@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import dwsc.proyecto.uncommentmovie.domain.Comment;
-import dwsc.proyecto.uncommentmovie.domain.Movie;
-import dwsc.proyecto.uncommentmovie.exceptions.CommentNotFoundException;
-import dwsc.proyecto.uncommentmovie.exceptions.CustomResponse;
-import dwsc.proyecto.uncommentmovie.exceptions.MovieNotFoundException;
-import dwsc.proyecto.uncommentmovie.service.CommentService;
-import dwsc.proyecto.uncommentmovie.service.MovieService;
+import dwsc.proyecto.deletecomment.domain.Comment;
+import dwsc.proyecto.deletecomment.domain.Movie;
+import dwsc.proyecto.deletecomment.exceptions.CommentNotFoundException;
+import dwsc.proyecto.deletecomment.exceptions.CustomResponse;
+import dwsc.proyecto.deletecomment.exceptions.MovieNotFoundException;
+import dwsc.proyecto.deletecomment.service.CommentService;
+import dwsc.proyecto.deletecomment.service.MovieService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;

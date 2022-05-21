@@ -1,4 +1,4 @@
-package dwsc.proyecto.uncommentmovie.domain;
+package dwsc.proyecto.deletecomment.domain;
 
 import java.util.Date;
 

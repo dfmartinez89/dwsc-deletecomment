@@ -1,4 +1,4 @@
-package dwsc.proyecto.uncommentmovie;
+package dwsc.proyecto.deletecomment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class UncommentmovieApplication {
+public class DeleteCommentApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UncommentmovieApplication.class, args);
+		SpringApplication.run(DeleteCommentApplication.class, args);
 	}
 
 }

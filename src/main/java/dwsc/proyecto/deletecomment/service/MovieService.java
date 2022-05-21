@@ -1,10 +1,10 @@
-package dwsc.proyecto.uncommentmovie.service;
+package dwsc.proyecto.deletecomment.service;
 
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import dwsc.proyecto.uncommentmovie.domain.Movie;
+import dwsc.proyecto.deletecomment.domain.Movie;
 
 @Service
 public interface MovieService {

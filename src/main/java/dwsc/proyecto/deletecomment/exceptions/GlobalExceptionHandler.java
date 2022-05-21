@@ -1,4 +1,4 @@
-package dwsc.proyecto.uncommentmovie.exceptions;
+package dwsc.proyecto.deletecomment.exceptions;
 
 import java.time.LocalDateTime;
 
