@@ -28,7 +28,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @Tag(name = "comment", description = "create comment")
-public class UnCommentController {
+public class DeleteCommentController {
 
 	@Autowired
 	CommentService commentService;
