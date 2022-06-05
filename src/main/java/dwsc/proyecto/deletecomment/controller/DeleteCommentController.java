@@ -41,7 +41,7 @@ public class DeleteCommentController {
 			@ApiResponse(responseCode = "404", description = "movie not found", content = @Content(schema = @Schema(implementation = CustomResponse.class))) })
 	@RequestMapping(method = RequestMethod.GET, path = "/comment/{movieId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Iterable<Comment>> getAllCommentsByMovieId(
-			@Parameter(description = "Movie id") @PathVariable String movieId) {
+			@Parameter(description = "Movie id") @PathVariable(required = true) String movieId) {
 		Optional<Movie> movie = movieService.findMovieById(movieId);
 		if (!movie.isPresent()) {
 			throw new MovieNotFoundException(HttpStatus.NOT_FOUND, "The movie with id:" + movieId + " does not exists");
@@ -55,17 +55,16 @@ public class DeleteCommentController {
 			@ApiResponse(responseCode = "404", description = "comment not found", content = @Content(schema = @Schema(implementation = CustomResponse.class))) })
 	@RequestMapping(method = RequestMethod.DELETE, path = "/comment/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Comment> deleteComment(
-			@Parameter(description = "Comment id") @PathVariable String id) {
+			@Parameter(description = "Comment id") @PathVariable(required = true) String id) {
 		Optional<Comment> comment = commentService.getComment(id);
 
 		if (!comment.isPresent()) {
-			throw new CommentNotFoundException(HttpStatus.NOT_FOUND,
-					"The comment with id: " + id + " does not exists");
+			throw new CommentNotFoundException(HttpStatus.NOT_FOUND, "The comment with id: " + id + " does not exists");
 		}
 
 		commentService.deleteComment(id);
-		
-		//Update score average
+
+		// Update score average
 		Movie movie = comment.get().getMovie();
 		String movieId = movie.getId();
 		double score = movieService.getScoreAverageByMovie(movieId);
