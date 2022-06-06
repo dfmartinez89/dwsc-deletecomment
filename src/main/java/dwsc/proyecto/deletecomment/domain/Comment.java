@@ -1,7 +1,5 @@
 package dwsc.proyecto.deletecomment.domain;
 
-import java.util.Date;
-
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -20,7 +18,7 @@ public class Comment {
 	@NonNull
 	private double score;
 	@CreatedDate
-	private Date createdAt;
+	private String createdAt;
 	@DBRef // tune workaround
 			// https://spring.io/blog/2021/11/29/spring-data-mongodb-relation-modelling
 	private Movie movie;
@@ -57,11 +55,11 @@ public class Comment {
 		this.score = score;
 	}
 
-	public Date getCreatedAt() {
+	public String getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(Date createdAt) {
+	public void setCreatedAt(String createdAt) {
 		this.createdAt = createdAt;
 	}
 
